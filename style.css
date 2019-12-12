@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+@media (max-width:990px)
+{
+    body{
+        font-size:14px;
+    }
+}
+
+/* Utils */
+.color-blue{
+    color: #2F6CE5;
+}
+
+.color-orange {
+    color:#E56135;
+}
+
+.color-green {
+    color: #02B875;
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.btn-secondary {
+    background:#EDEEF0;
+    color: #000000;
+    border:none;
+}
+
+.sm-text {
+    font-size:12px;
+}
+
+/* Header Section */
+
+header {
+    margin-top: 56px;
+    height: 440px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.6) 100%), url('./assets/img/banner.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    color:white;
+    position: relative;
+}
+
+header .content {
+    position:  absolute;
+    top:60%;
+    left:15%;
+}
+
+header .content h1 {
+    font-size: 36px;
+    line-height: 47px;
+}
+
+header .content h3 {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+
+@media (max-width:576px)
+{
+    .navbar{
+        z-index: 99;
+    }
+    header {
+        height:230px;
+        margin-top: -58px;
+    }
+    header .content{
+        top: 70%;
+        left: 10%;
+    }
+
+    header .content h1 {
+        font-size:1.5rem;
+        line-height: 16px;
+    }
+
+    header .content h3 {
+        font-size:.8rem;
+        line-height: 22px;
+    }
+}
+
+
+.nav-link {
+    color: #8A8A8A;
+    display: inline-block;
+    transition: .25s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-link.active {
+    color: #000000;
+    position: relative;
+}
+.nav-link.active::after {
+    content:'';
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width:100%;
+    height: 2px;
+    background: #000000;
+}
+.nav-link:hover{
+    color:#000000;
+}
+
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    width:140%;
+    border-radius: 21px;
+    background: #f2f2f2;
+    color: #5C5C5C;
+    font-size:14px;
+    font-weight: 500;
+}
+
+.has-search .form-control::placeholder{
+    color: #5C5C5C;
+    font-size:14px;
+    font-weight: 500;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #5C5C5C;
+}
+
+.has-search input {
+    font-size: 14px;
+}
+
+.has-search.form-group{
+    margin-bottom: 0; 
+}
+
+.create-account {
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #2E2E2E;
+    text-decoration: none;
+}
+.create-account:hover{
+    text-decoration: none !important;
+}
+
+.account {
+    display:flex;
+    align-items: center;
+    color: #000000;
+}
+
+.account:hover{
+    text-decoration: none;
+}
+
+.account .account-img {
+    background:url('./assets/img/user4.jpg');
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.account .account-username {
+    padding-left: 10px;
+}
+
+/* Main Section */
+
+main {
+    margin-top: 47px;
+}
+
+.card {
+    margin-bottom: 16px;
+    border-radius: 4px !important;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-category {
+    font-family: 'IBM Plex Sans';
+    font-weight:500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.card-title {
+    font-family: "IBM Plex Sans";
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 134.17%;
+}
+
+.card-text {
+    font-family: IBM Plex Sans;
+    font-size: 19px;
+    line-height: 134.17%;
+    color: #5C5C5C;
+}
+
+.card-profile {
+    margin-top: 40px;
+}
+
+.user {
+    display:flex;
+    align-items: center;
+}
+.user .user-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background:url('https://randomuser.me/api/portraits/men/7.jpg');
+    background-size: cover;
+}
+
+.user .user-img--2 {
+    background: url(./assets/img/user2.jpg);
+    background-size: cover;
+}
+
+.user .user-img--3 {
+    background: url(./assets/img/user3.jpg);
+    background-size: cover;
+}
+
+.user .user-img--4 {
+    background: url(./assets/img/user4.jpg);
+    background-size: cover;
+}
+
+.user .user-name {
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 10px;
+}
+
+.views {
+    font-family: IBM Plex Sans ;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    margin-right: 40px;
+    color: #525252;
+}
+
+.btn-share {
+    border-radius: 2px !important;
+    width:42px;
+    height: 36px;
+    background:#EDEEF0;
+    color:#2D2D2D;
+    border:none;
+}
+
+.btn-share:hover{
+    background:#f2f2f2;
+}
+
+.location {
+    margin-top: 56px;
+    font-family: IBM Plex Sans;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.location-media {
+    opacity:.5;
+}
+
+.media-body {
+    margin-top: -7px;
+    padding-left: 5px;
+}
+
+.enter-address {
+    font-size:14px;
+    display: inline-block;
+    width: 85%;
+    border:none;
+    border-bottom: 1px solid #B8B8B8;
+    border-radius: 0;
+}
+.enter-address:focus{
+    box-shadow: none;
+}
+
+.recommended-group {
+    margin-top: 54px;
+    
+}
+
+.recommended {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.list-group {
+    margin-top: 10px;
+}
+
+.list-group-item-modified {
+    display:flex;
+    align-items: center;
+    border:none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 11px .3rem;
+}
+
+.list-group-media {
+    width:36px;
+    height:36px;
+}
+
+
+
+@media (max-width:990px)
+{
+    main {
+        margin-top: 38px;
+    }
+    
+    .card img {
+        height: 150px;
+    }
+    
+    .card-body {
+        padding:1.25rem;
+    }
+
+    .card-category {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .card-title {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    
+    .card-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .card-profile {
+        margin-top: 0px;
+    }
+    
+    .user .user-img {
+        width: 37px;
+        height: 37px;
+    }
+    
+    .user .user-name {
+        font-size: 13px;
+        line-height: 17px;
+        margin-left: 5px;
+    }
+    
+    .views {
+        font-size: 12px;
+        line-height: 16px;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .col-md-9 {
+        padding:0 0;
+    }
+
+    .col-md-9 .card {
+        border-radius: 0;
+    }
+
+    .col-md-9 .card img {
+        height: 120px;
+    }
+}
+
+
+@media (max-width:576px)
+{
+    main {
+        margin-top: 28px;
+    }
+    
+    .card img {
+        height: 180px;
+    }
+    
+    .card-body {
+        padding:1rem;
+    }
+
+    .card-category {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .card-title {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    
+    .card-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .card-profile {
+        margin-top: 0px;
+    }
+    
+    .user .user-img {
+        width: 37px;
+        height: 37px;
+    }
+    
+    .user .user-name {
+        font-size: 13px;
+        line-height: 17px;
+        margin-left: 5px;
+    }
+    
+    .views {
+        font-size: 12px;
+        line-height: 16px;
+        text-align: right;
+        margin-right: 10px;
+    }
+    
+}
+
+
+/*  Modal */
+.modal-header {
+    padding: 0;
+}
+
+.modal-header .close {
+    padding: 0;
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2rem 0 -2rem auto !important;
+    color: #2D2D2D;
+    box-shadow: none;
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    z-index: 999;
+}
+
+@media (max-width:767px)
+{
+    .modal-headline {
+        font-size:1.3rem;
+    }
+    .modal-header .close {
+        width:20px;
+        height:20px;
+        top:13%;
+        right:40px;
+        background: #000000;
+        color:white;
+    }
+
+    .modal-content {
+        position:fixed;
+        bottom:0;
+        left: 0;
+    }
+}
+
+.modal-header span {
+    width:100%;
+}
+.modal-dialog-lg{
+    max-width: 736px !important;
+}
+
+/* Custom Form */
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-control {
+    background: #F7F8FA;
+    border-radius:0;
+}
+
+.float-button {
+    position: fixed;
+    width:54px;
+    height:54px;
+
+    right:19px;
+    bottom:19px;
+    border-radius: 50%;
+    background:linear-gradient(180deg, #FF5C5C 0%, #F0568A 100%);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.18);
+    color:white;
+}
